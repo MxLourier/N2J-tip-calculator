@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+
+
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Space+Mono:wght@700&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<div class="splitter">
+  <img src="images/logo.svg" alt="">
+</div>
+
+
+
+  <div class="whiteContainer">
+    <div class="leftContainer">
+
+      <div class="">
+        <h2>Bill</h2>
+        <input type="number" id="bill-input">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="11" height="17"><path fill="#9EBBBD" d="M6.016 16.328v-1.464c1.232-.08 2.22-.444 2.964-1.092.744-.648 1.116-1.508 1.116-2.58v-.144c0-.992-.348-1.772-1.044-2.34-.696-.568-1.708-.932-3.036-1.092V4.184c.56.144 1.012.4 1.356.768.344.368.516.816.516 1.344v.288h1.824v-.432c0-.448-.088-.876-.264-1.284a3.783 3.783 0 00-.744-1.116A4.251 4.251 0 007.54 2.9a5.324 5.324 0 00-1.524-.492V.872H4.288V2.36a5.532 5.532 0 00-1.416.324c-.448.168-.84.392-1.176.672-.336.28-.604.616-.804 1.008-.2.392-.3.844-.3 1.356v.144c0 .96.316 1.708.948 2.244.632.536 1.548.884 2.748 1.044v3.912c-.704-.16-1.248-.472-1.632-.936-.384-.464-.576-1.08-.576-1.848v-.288H.256v.576c0 .464.08.924.24 1.38.16.456.404.88.732 1.272.328.392.744.728 1.248 1.008s1.108.476 1.812.588v1.512h1.728zM4.288 7.424c-.688-.128-1.164-.332-1.428-.612-.264-.28-.396-.644-.396-1.092 0-.464.176-.832.528-1.104.352-.272.784-.448 1.296-.528v3.336zm1.728 5.712V9.344c.768.128 1.328.328 1.68.6.352.272.528.688.528 1.248 0 .544-.196.984-.588 1.32-.392.336-.932.544-1.62.624z"/></svg> -->
+
+      </div>
+
+      <div class="">
+        <h2>Select Tip %</h2>
+
+        <div class="buttons">
+          <button type="button" name="button">5%</button>
+          <button type="button" name="button">10%</button>
+          <button type="button" name="button" id="button15">15%</button>
+          <button type="button" name="button">25%</button>
+          <button type="button" name="button">50%</button>
+          <input type="number" placeholder="Custom" id="custom" >
+
+        </div>
+      </div>
+
+      <div class="">
+        <h2 id="number-of-people">Number of People</h2> <h2 id="not-zero"> Can't be zero</h2>
+        <input type="number" min="1" id="number-input" onfocusout = "focusOut(event)" onfocusin = "focusIn()">
+
+      </div>
+
+
+    </div>
+
+
+    <div class="rightContainer">
+
+      <div class="results">
+
+        <div class="result">
+          <div class="result-label">
+            <h2>Tip Amount</h2>
+            <p>/ person</p>
+          </div>
+          <p class="result-number">$4.27</p>
+        </div>
+
+        <div class="result">
+          <div class="result-label">
+            <h2>Total</h2>
+            <p>/ person</p>
+          </div>
+          <p class="result-number">$32.79</p>
+        </div>
+
+      </div>
+
+
+
+      <button type="button" class="reset" name="button">Reset</button>
+
+    </div>
+
+
+
+
+  </div>
+
+
+
+<script src="index.js"></script>
+
+</body>
+
+</html>
