@@ -70,7 +70,8 @@ function focusOut15(){
 
 function resetControl(){
   if(billZero && peopleZero){
-    reset.style.backgroundColor = "red";
-    reset.disabled = "disabled";
+    reset.setAttribute("disabled", "disabled")
+  } else {
+    reset.removeAttribute("disabled");
   }
 } // This function disables "Reset" button when both Bill and NoP fields have a 0 input.
