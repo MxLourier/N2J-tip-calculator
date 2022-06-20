@@ -169,7 +169,7 @@ p {
   outline-style: none;
 }
 
-.button-blue:focus, .reset:focus {
+.button-blue:focus, #reset:focus {
   background-color: hsl(173, 61%, 77%);
   color: hsl(183, 100%, 15%);
 }

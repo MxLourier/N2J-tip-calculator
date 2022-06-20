@@ -34,19 +34,19 @@
 
       <div class="">
         <h2>Bill</h2>
-        <input type="number" id="bill-input">
+        <input type="number" id="bill-input" onfocusout = "focusOutBill(event)">
       </div>
 
       <div class="">
         <h2>Select Tip %</h2>
 
         <div class="buttons">
-          <button type="button" name="button" class = "button-blue">5%</button>
-          <button type="button" name="button" class = "button-blue">10%</button>
+          <button type="button" name="button" class = "button-blue" onclick="makeButtonBlue()">5%</button>
+          <button type="button" name="button" class = "button-blue" onclick="makeButtonBlue()">10%</button>
           <button type="button" name="button" class = "button15default" id="button15" autofocus  onfocusout="focusOut15()" >15%</button>
-          <button type="button" name="button" class = "button-blue">25%</button>
-          <button type="button" name="button" class = "button-blue">50%</button>
-          <input type="number" placeholder="Custom" id="custom" onfocusin = "customFocus()"  onfocusout = "customFocusOut(event)">
+          <button type="button" name="button" class = "button-blue" onclick="makeButtonBlue()">25%</button>
+          <button type="button" name="button" class = "button-blue" onclick="makeButtonBlue()">50%</button>
+          <input type="number" placeholder="Custom" id="custom" onfocusin = "customFocus()"  onfocusout = "customFocusOut(event)" onclick="makeButtonBlue()">
 
         </div>
       </div>
@@ -85,7 +85,7 @@
 
 
 
-      <button type="button" class="reset" name="button">Reset</button>
+      <button type="button" id="reset" name="button">Reset</button>
 
     </div>
 
