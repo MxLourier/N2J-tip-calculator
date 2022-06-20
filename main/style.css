@@ -52,7 +52,6 @@ p {
   display: flex;
   background-color: white;
   border-radius: 20px;
-  margin: 50px;
   width: 920px;
   height: 481px;
   margin: 100px auto;
@@ -174,6 +173,11 @@ p {
   color: hsl(183, 100%, 15%);
 }
 
+#reset:disabled {
+  background-color: hsl(183, 78%, 24%);
+  color: hsla(183, 100%, 15%, 35%);
+}
+
 #number-of-people {
   display: inline-block;
 }
@@ -185,10 +189,8 @@ p {
 
 }
 
-
-
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button, /* remove arrows from number input field*/
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -197,4 +199,50 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 375px) {
+  body{
+    margin: 0;
+  }
+
+  .whiteContainer {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 789px;
+    padding: 3%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .leftContainer {
+    width: 90%;
+    height: 55%;
+    margin: auto;
+    padding: 0 0 0 0;
+  }
+
+  .rightContainer {
+    margin: auto;
+    margin-bottom: 7%;
+    width: 80%;
+    height: 30%;
+    padding: 4%;
+  }
+
+  .buttons {
+    margin: auto;
+    width: 100%;
+  }
+
+ .leftContainer button {
+   flex-basis: 48%;
+   font-size: 24px;
+ }
+
+ #custom {
+   flex-basis: 43%;
+ }
+
 }
