@@ -4,15 +4,16 @@ body {
 }
 
 button {
-  background-color: hsl(183, 100%, 15%);
   border-radius: 5px;
-  color: white;
   width: 33%;
   font-family: "Space Mono", monospace;
   border-style: none;
 }
 
-
+.button-blue {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+}
 
 input {
   background-color: hsl(189, 41%, 97%);
@@ -28,13 +29,13 @@ input {
   background-repeat: no-repeat;
   background-position: left;
   background-origin: content-box;
-
 }
 
 input:focus {
   outline-style: solid;
   outline-color: hsl(172, 67%, 45%);
   outline-width: 2px;
+  caret-color: hsl(173, 61%, 77%);
 }
 
 h2 {
@@ -149,9 +150,9 @@ p {
 }
 
 #custom {
-  flex-basis: 31%;
+  flex-basis: 26%;
   margin: 0;
-  padding: 0;
+  padding: 0 2.5% 0 2.5%;
   height: 48px;
   font-size: 24px;
   background-color: hsl(189, 41%, 97%);
@@ -159,12 +160,16 @@ p {
   color: hsl(180, 18, 40);
 }
 
-#button15 {
+.button15default {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
 
-button:focus, #button15:focus {
+.button15default:focus {
+  outline-style: none;
+}
+
+.button-blue:focus, .reset:focus {
   background-color: hsl(173, 61%, 77%);
   color: hsl(183, 100%, 15%);
 }
