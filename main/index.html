@@ -9,10 +9,6 @@
 
   <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
-
-
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,37 +19,38 @@
 
 <body>
 
-<div class="splitter">
-  <img src="images/logo.svg" alt="">
-</div>
+  <div class="splitter">
+    <img src="images/logo.svg" alt="">
+  </div>
 
 
 
   <div class="whiteContainer">
     <div class="leftContainer">
 
-      <div class="">
+      <div class="bill">
         <h2>Bill</h2>
-        <input type="number" id="bill-input" onfocusout = "focusOutBill(event)">
+        <input type="number" id="bill-input">
       </div>
 
       <div class="">
         <h2>Select Tip %</h2>
 
         <div class="buttons">
-          <button type="button" name="button" class = "button-blue" onclick="makeButtonBlue()">5%</button>
-          <button type="button" name="button" class = "button-blue" onclick="makeButtonBlue()">10%</button>
-          <button type="button" name="button" class = "button15default" id="button15" autofocus  onfocusout="focusOut15()" >15%</button>
-          <button type="button" name="button" class = "button-blue" onclick="makeButtonBlue()">25%</button>
-          <button type="button" name="button" class = "button-blue" onclick="makeButtonBlue()">50%</button>
-          <input type="number" placeholder="Custom" id="custom" onfocusin = "customFocus()"  onfocusout = "customFocusOut(event)" onclick="makeButtonBlue()">
+          <button type="button" name="button" class="button-blue">5%</button>
+          <button type="button" name="button" class="button-blue">10%</button>
+          <button type="button" name="button" class="button-blue button15default" id="button15">15%</button>
+          <button type="button" name="button" class="button-blue">25%</button>
+          <button type="button" name="button" class="button-blue">50%</button>
+          <input type="number" placeholder="Custom" id="custom" >
 
         </div>
       </div>
 
       <div class="">
-        <h2 id="number-of-people">Number of People</h2> <h2 id="not-zero"> Can't be zero</h2>
-        <input type="number" id="number-input" onfocusout = "focusOut(event)" onfocusin = "focusIn()">
+        <h2 id="number-of-people">Number of People</h2>
+        <h2 id="not-zero"> Can't be zero</h2>
+        <input type="number" id="number-input">
 
       </div>
 
@@ -70,7 +67,7 @@
             <h2>Tip Amount</h2>
             <p>/ person</p>
           </div>
-          <p class="result-number">$4.27</p>
+          <p class="result-number">$0.00</p>
         </div>
 
         <div class="result">
@@ -78,7 +75,7 @@
             <h2>Total</h2>
             <p>/ person</p>
           </div>
-          <p class="result-number">$32.79</p>
+          <p class="result-number">$0.00</p>
         </div>
 
       </div>
@@ -96,7 +93,7 @@
 
 
 
-<script src="index.js"></script>
+  <script src="index.js"></script>
 
 </body>
 

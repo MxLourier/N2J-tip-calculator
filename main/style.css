@@ -15,6 +15,11 @@ button {
   color: white;
 }
 
+.button-focus {
+  background-color: #9FE8DF;
+  color: #00474B;
+}
+
 input {
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
@@ -52,8 +57,12 @@ p {
   display: flex;
   background-color: white;
   border-radius: 20px;
-  width: 920px;
-  height: 481px;
+  width: 100%;
+  height: 52.28vw;
+  max-width: 920px;
+  min-width: 750px;
+  max-height: 481px;
+  min-height: 392px;
   margin: 100px auto;
 }
 
@@ -168,11 +177,6 @@ p {
   outline-style: none;
 }
 
-.button-blue:focus, #reset:focus {
-  background-color: hsl(173, 61%, 77%);
-  color: hsl(183, 100%, 15%);
-}
-
 #reset:disabled {
   background-color: hsl(183, 78%, 24%);
   color: hsla(183, 100%, 15%, 35%);
@@ -202,15 +206,26 @@ input[type=number] {
 }
 
 @media screen and (max-width: 375px) {
+
   body{
     margin: 0;
+  }
+
+  .splitter {
+    margin: auto;
+    margin-top: 13%;
+    margin-bottom: 13%;
+    width: 23.1%;
+    height: 14.17%;
   }
 
   .whiteContainer {
     flex-direction: column;
     margin: 0;
-    width: 100%;
-    height: 789px;
+    width: 94%;
+    min-width: 0;
+    height: 210vw;
+    max-height: 789px;
     padding: 3%;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -220,7 +235,11 @@ input[type=number] {
     width: 90%;
     height: 55%;
     margin: auto;
-    padding: 0 0 0 0;
+    padding: 0;
+  }
+
+  .bill{
+    margin-bottom: 10%;
   }
 
   .rightContainer {
