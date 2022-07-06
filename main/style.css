@@ -4,15 +4,21 @@ body {
 }
 
 button {
-  background-color: hsl(183, 100%, 15%);
   border-radius: 5px;
-  color: white;
   width: 33%;
   font-family: "Space Mono", monospace;
   border-style: none;
 }
 
+.button-blue {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+}
 
+.button-focus {
+  background-color: #9FE8DF;
+  color: #00474B;
+}
 
 input {
   background-color: hsl(189, 41%, 97%);
@@ -28,13 +34,13 @@ input {
   background-repeat: no-repeat;
   background-position: left;
   background-origin: content-box;
-
 }
 
 input:focus {
   outline-style: solid;
   outline-color: hsl(172, 67%, 45%);
   outline-width: 2px;
+  caret-color: hsl(173, 61%, 77%);
 }
 
 h2 {
@@ -51,9 +57,12 @@ p {
   display: flex;
   background-color: white;
   border-radius: 20px;
-  margin: 50px;
-  width: 920px;
-  height: 481px;
+  width: 100%;
+  height: 52.28vw;
+  max-width: 920px;
+  min-width: 750px;
+  max-height: 481px;
+  min-height: 392px;
   margin: 100px auto;
 }
 
@@ -96,7 +105,7 @@ p {
   font-size: 24px;
 }
 
-.rightContainer button {
+#reset {
   margin: auto;
   width: 100%;
   height: 48px;
@@ -149,9 +158,9 @@ p {
 }
 
 #custom {
-  flex-basis: 31%;
+  flex-basis: 26%;
   margin: 0;
-  padding: 0;
+  padding: 0 2.5% 0 2.5%;
   height: 48px;
   font-size: 24px;
   background-color: hsl(189, 41%, 97%);
@@ -159,14 +168,18 @@ p {
   color: hsl(180, 18, 40);
 }
 
-#button15 {
+.button15default {
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
 }
 
-button:focus, #button15:focus {
-  background-color: hsl(173, 61%, 77%);
-  color: hsl(183, 100%, 15%);
+.button15default:focus {
+  outline-style: none;
+}
+
+#reset:disabled {
+  background-color: hsl(183, 78%, 24%);
+  color: hsla(183, 100%, 15%, 35%);
 }
 
 #number-of-people {
@@ -180,10 +193,8 @@ button:focus, #button15:focus {
 
 }
 
-
-
 /* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
+input::-webkit-outer-spin-button, /* remove arrows from number input field*/
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -192,4 +203,65 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 375px) {
+
+  body{
+    margin: 0;
+  }
+
+  .splitter {
+    margin: auto;
+    margin-top: 13%;
+    margin-bottom: 13%;
+    width: 23.1%;
+    height: 14.17%;
+  }
+
+  .whiteContainer {
+    flex-direction: column;
+    margin: 0;
+    width: 94%;
+    min-width: 0;
+    height: 210vw;
+    max-height: 789px;
+    padding: 3%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .leftContainer {
+    width: 90%;
+    height: 55%;
+    margin: auto;
+    padding: 0;
+  }
+
+  .bill{
+    margin-bottom: 10%;
+  }
+
+  .rightContainer {
+    margin: auto;
+    margin-bottom: 7%;
+    width: 80%;
+    height: 30%;
+    padding: 4%;
+  }
+
+  .buttons {
+    margin: auto;
+    width: 100%;
+  }
+
+ .leftContainer button {
+   flex-basis: 48%;
+   font-size: 24px;
+ }
+
+ #custom {
+   flex-basis: 43%;
+ }
+
 }
